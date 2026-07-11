@@ -1,0 +1,11 @@
+plugins {
+    id "net.neoforged.moddev"
+}
+
+neoForge {
+    neoFormVersion = neoform_version
+}
+
+dependencies {
+    compileOnly "org.spongepowered:mixin:${mixin_version}"
+}

@@ -1,0 +1,28 @@
+package me.noramibu.lumentooltips.client.screen;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.ChatScreen;
+import net.minecraft.client.gui.screens.Screen;
+
+public final class LumenScreenOpener {
+  private static boolean configPending;
+
+  private LumenScreenOpener() {}
+
+  public static void openConfig(Screen parent) {
+    Minecraft minecraft = Minecraft.getInstance();
+    if (minecraft.screen instanceof ChatScreen) {
+      configPending = true;
+      return;
+    }
+    minecraft.setScreen(new LumenConfigScreen(parent));
+  }
+
+  public static void openPending() {
+    if (!configPending) {
+      return;
+    }
+    configPending = false;
+    Minecraft.getInstance().setScreen(new LumenConfigScreen(null));
+  }
+}

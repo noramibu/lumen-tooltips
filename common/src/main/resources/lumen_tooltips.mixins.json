@@ -1,0 +1,29 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.noramibu.lumentooltips.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "AbstractContainerScreenMixin",
+    "ChatScreenMixin",
+    "ClientPacketListenerMixin",
+    "ClientTooltipComponentMixin",
+    "ComponentMixin",
+    "CreativeSlotWrapperAccessor",
+    "DefaultTooltipPositionerMixin",
+    "EntityAccessor",
+    "GuiGraphicsExtractorMixin",
+    "ItemContainerContentsMixin",
+    "ItemStackTooltipMixin",
+    "KeyboardHandlerMixin",
+    "MobBucketItemAccessor",
+    "MouseHandlerMixin",
+    "OptionsScreenMixin",
+    "ParticleEngineAccessor",
+    "SingleQuadParticleAccessor",
+    "TranslatableContentsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
