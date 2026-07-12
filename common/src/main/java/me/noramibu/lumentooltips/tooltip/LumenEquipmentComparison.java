@@ -52,7 +52,7 @@ final class LumenEquipmentComparison {
     differences.forEach(difference -> tooltip.add(displayLine(difference)));
   }
 
-  static List<Difference> differences(
+  private static List<Difference> differences(
       ItemAttributeModifiers candidate,
       ItemAttributeModifiers equipped,
       EquipmentSlot slot) {
@@ -107,7 +107,7 @@ final class LumenEquipmentComparison {
     return CommonComponents.space().append(value);
   }
 
-  record Difference(
+  private record Difference(
       Holder<Attribute> attribute, AttributeModifier.Operation operation, double amount) {}
 
   private record Key(Holder<Attribute> attribute, AttributeModifier.Operation operation) {}
